@@ -1,6 +1,6 @@
 # FleurBot.js
 
-FleurBot is a browser-based chat system with a Bot.
+FleurBot is a browser-based chat system with a Bot. [Examples here](https://fleurman.github.io/fleurbot/index.html)
 
 ## The System
 >TODO: html & css canvas
