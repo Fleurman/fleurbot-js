@@ -1,6 +1,6 @@
 body { background-color:grey;}
 
-.bot_mssg {
+.fbot_mssg {
 	margin-bottom: 15px; 
 	opacity: 1;
 	-moz-animation: appear 0.5s ease; /* Mozilla */
@@ -8,16 +8,16 @@ body { background-color:grey;}
 	animation: appear 0.5s ease;
 }
 
-.bot_mssg > img {
+.fbot_mssg > img {
 	border-radius: 25px;
 	width: 64px;
 }
 
-.bot_mssg > h1 {
+.fbot_mssg > h1 {
 	font-size: 1.2em;
 }
 
-.bot_mssg p {
+.fbot_mssg p {
 	padding: 10px;
 	border-radius: 20px;
 	line-height: 0.7em;
@@ -29,24 +29,24 @@ body { background-color:grey;}
 @-webkit-keyframes appear { 0% {opacity: 0;} 100% {opacity: 1;} }
 @keyframes appear { 0% {opacity: 0;} 100% {opacity: 1;} }
 
-.bot_mssg.bot {
+.fbot_mssg.bot {
 	text-align:left;
 }
 
-.bot_mssg.bot > img {
+.fbot_mssg.bot > img {
 	display : float;
 	top: 0;
 	left: 0;
 	/* background-color:lightgreen; */
 }
 
-.bot_mssg.bot > h1 {
+.fbot_mssg.bot > h1 {
 	display: inline;
 	top: 0;
 	color: gold;
 }
 
-.bot_mssg.bot p {
+.fbot_mssg.bot p {
 	display:block;
 	margin: 0 10px 5px 40px;
 	color: dimgrey;
@@ -54,24 +54,24 @@ body { background-color:grey;}
 	border-top-left-radius: 0;
 }
 
-.bot_mssg.user {
+.fbot_mssg.user {
 	text-align:right;
 }
 
-.bot_mssg.user > img {
+.fbot_mssg.user > img {
 	display : float;
 	top: 0;
 	right: 0;
 	/* background-color:lightgreen; */
 }
 
-.bot_mssg.user > h1 {
+.fbot_mssg.user > h1 {
 	display: inline;
 	top: 0;
 	color: yellow;
 }
 
-.bot_mssg.user p {
+.fbot_mssg.user p {
 	display:block;
 	margin: 0 40px 5px 0;
 	color: dimgrey;
@@ -80,7 +80,7 @@ body { background-color:grey;}
 }
 
 
-.bot_log p {
+.fbot_log p {
 	display:block;
 	margin: 0 auto ;
 	margin-top: 30px;
@@ -95,7 +95,7 @@ body { background-color:grey;}
 	animation: appear 0.5s ease;
 }
 
-.bot_writing {
+.fbot_writing {
 	width: 32px;
 	opacity: 0.8;
 	margin: 15px auto;
@@ -113,18 +113,18 @@ body { background-color:grey;}
     transform: rotate(360deg);}
 }
 
-#botsend { text-align:center; }
+#fbotsend { text-align:center; }
 
-#botsend:hover {
+#fbotsend:hover {
 	background-color: yellow;
 	cursor: pointer;
 }
 
-#botsend:active {
+#fbotsend:active {
 	background-color: goldenrod;
 }
 
-#botinput {
+#fbotinput {
 	position:fixed;
 	background-color: dimgrey;
 	box-shadow: 0 0 40px dimgrey;
@@ -135,7 +135,7 @@ body { background-color:grey;}
 	text-align:center;
 }
 
-#botinput textarea {
+#fbotinput textarea {
 	resize: none;
 	overflow-y: auto;
 	background-color:black;
@@ -152,13 +152,13 @@ body { background-color:grey;}
 	border-radius:15px;
 }
 
-#botinput textarea:focus { outline: none; }
+#fbotinput textarea:focus { outline: none; }
 
-#botwrap {
+#fleurbot {
 	overflow-y: hidden;
 }
 
-#botmessages {
+#fbotmessages {
 	position:absolute;
 	overflow-y: auto;
 	overflow-x: hidden;

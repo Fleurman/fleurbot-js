@@ -3,11 +3,6 @@
 //////////////////////////////////////////////////////////////////////////////
 /*
 
-Bot.js is blablabla
-
-TODO - KeyList.any	 	- Possibility to set a precise number of words to match.
-TODO - checkFunction()	- Function to validate (in place of a word)
-
 */
 var setup = function(){
 	var fdiv = document.getElementById("fleurbot");
@@ -22,7 +17,8 @@ var setup = function(){
 	ftext.autofocus="true";
 	ftext.maxlength="40";
 	ftext.placeholder="Message";
-	ftext.onkeypress= function(){ submitToBot(event)};
+	//ftext.onkeypress = submitToBot;
+	ftext.addEventListener ("keypress", submitToBot);
 	finput.appendChild(ftext);
 	var fsend = document.createElement("div");
 	fsend.id = "fbotsend";
@@ -421,10 +417,9 @@ function processInput() {
 		console.log('includeKey');
 		
 	} else if (isShort()) {
-		//return;
 		console.log('isShort');
 	} else if (noReaction()) {
-		return;
+		//return;
 	} else {
 		console.log('notUnderstood');
 		notUnderstood();
@@ -447,14 +442,14 @@ function processInput() {
 /* ==No Reaction== */
 function noReaction() {
 	return false;
-	if(Math.random() > 0.25){
+/* 	if(Math.random() > 0.25){
 		botAction.next = [];
 		inputState(true);
 		emptyInput();
 		return true;
 	} else {
 		return false;
-	}
+	} */
 }
 
 /* ==Input Triggers Nothing== 
@@ -913,7 +908,7 @@ function formatToQuery(match,qry){
 	var s = qry
 	s = qry.replace(/ /,"&20");
 	s = qry.replace(/,/,"%2C");
-	s = qry.replace(/?/,"%3F");
+	//s = qry.replace(/?/,"%3F");
 	s = qry.replace(/#/,"%23");
 	s = qry.replace(/=/,"%3D");
 	return s

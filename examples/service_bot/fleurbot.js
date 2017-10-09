@@ -3,12 +3,32 @@
 //////////////////////////////////////////////////////////////////////////////
 /*
 
-Bot.js is blablabla
-
-TODO - KeyList.any	 	- Possibility to set a precise number of words to match.
-TODO - checkFunction()	- Function to validate (in place of a word)
-
 */
+var setup = function(){
+	var fdiv = document.getElementById("fleurbot");
+	var fmssg = document.createElement("div");
+	fmssg.id = "fbotmessages";
+	fdiv.appendChild(fmssg);
+	var finput = document.createElement("div");
+	finput.id = "fbotinput";
+	var ftext = document.createElement("textarea");
+	ftext.id = "fbottextarea";
+	ftext.name="fbotinput";
+	ftext.autofocus="true";
+	ftext.maxlength="40";
+	ftext.placeholder="Message";
+	//ftext.onkeypress = submitToBot;
+	ftext.addEventListener ("keypress", submitToBot);
+	finput.appendChild(ftext);
+	var fsend = document.createElement("div");
+	fsend.id = "fbotsend";
+	fsend.onclick = function(){submitToBot()};
+	fsend.innerHTML = "Send";
+	finput.appendChild(fsend);
+	fdiv.appendChild(finput);
+}
+setup();
+setup = null;
 
 function checkList(i, w, n) {
 	var obj = {
@@ -205,15 +225,15 @@ var answer = {};
 //////////////////////////////////////////////////////////////////////////////
 
 /* The Input Field */
-var textInput = document.getElementById('bottextarea');
+var textInput = document.getElementById('fbottextarea');
 
 /* The Div Containing The Messages */
-var chatBox = document.getElementById('botmessages');
+var chatBox = document.getElementById('fbotmessages');
 
 /* The 'is writing' Image (className = "writing" ) */
 var writing = document.createElement('img');
 writing.src = "writing.png";
-writing.className = "bot_writing";
+writing.className = "fbot_writing";
 
 //////////////////////////////////////////////////////////////////////////////
 //								FUNCTIONS									//
@@ -289,7 +309,7 @@ function drawNewPost(autor, content) {
 		var act = botdata.characters[autor];
 		
 		var post = document.createElement('div');
-		post.className = "bot_mssg bot";
+		post.className = "fbot_mssg bot";
 		
 		if (act.avatar){
 			var img = document.createElement('img');
@@ -330,7 +350,7 @@ function drawNewInput() {
 		var autor = botdata.characters.user;
 		
 		var post = document.createElement('div');
-		post.className = "bot_mssg user";
+		post.className = "fbot_mssg user";
 		
 		if(autor.avatar){
 			var img = document.createElement('img');
@@ -360,7 +380,7 @@ function drawNewInput() {
 function drawNewLog(v) {
 	
 	var post = document.createElement('div');
-	post.className = "bot_log";
+	post.className = "fbot_log";
 	
 	var p = document.createElement('p');
 	p.innerHTML = v;
@@ -421,14 +441,14 @@ function processInput() {
 /* ==No Reaction== */
 function noReaction() {
 	return false;
-	if(Math.random() > 0.25){
+	/* if(Math.random() > 0.25){
 		botAction.next = [];
 		inputState(true);
 		emptyInput();
 		return true;
 	} else {
 		return false;
-	}
+	} */
 }
 
 /* ==Input Triggers Nothing== 
@@ -831,7 +851,7 @@ function showWriting() {
 
 /* ==Hide The 'is writing' Image== */
 function hideWriting() {
-	var w = document.querySelector('.bot_writing');
+	var w = document.querySelector('.fbot_writing');
 	if(w)
 		w.parentNode.removeChild(w);
 }
@@ -887,7 +907,7 @@ function formatToQuery(match,qry){
 	var s = qry
 	s = qry.replace(/ /,"&20");
 	s = qry.replace(/,/,"%2C");
-	s = qry.replace(/?/,"%3F");
+	//s = qry.replace(/?/,"%3F");
 	s = qry.replace(/#/,"%23");
 	s = qry.replace(/=/,"%3D");
 	return s
