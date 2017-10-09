@@ -1,0 +1,162 @@
+body { background-color:#001111;}
+
+@font-face {
+	font-family: 'SimiliBit';
+	src: url('SimiliBit.ttf') format('truetype');
+}
+
+a {
+	text-decoration: none;
+	font-style:italic;
+	color: rgb(255,210,210);
+}
+a:visited {color: rgb(255,210,210);}
+
+.fbot_mssg {
+	font-family:'SimiliBit';
+	font-size:1em;
+	text-align:left;
+	margin-bottom: 4px;
+	opacity: 1;
+	/* -moz-animation: appear 0.5s ease;
+	-webkit-animation: appear 0.5s ease;
+	animation: appear 0.5s ease; */
+}
+
+/* .bot_mssg > img {
+	border-radius: 25px;
+	width: 64px;
+} */
+
+.fbot_mssg > h1 {
+	padding: 2px;
+	margin: 5px;
+	margin-right:0;
+	display: inline;
+	font-size:1em;
+	font-style: italic;
+}
+.fbot_mssg > h1::after {
+	content: " > ";
+	font-style: italic;
+}
+
+.fbot_mssg p {
+	padding: 2px;
+	margin: 5px;
+	margin-left:0;
+	display:inline;
+	font-size: 1em;
+	word-wrap: break-word;
+}
+
+@-webkit-keyframes appear { 0% {opacity: 0;} 100% {opacity: 1;} }
+@keyframes appear { 0% {opacity: 0;} 100% {opacity: 1;} }
+
+.fbot_mssg.bot {
+	
+}
+
+/* .bot_mssg.bot > img {
+	display : float;
+	top: 0;
+	left: 0;
+	/* background-color:lightgreen; */
+} */
+
+.fbot_mssg.bot > h1 {
+	color: gold;
+}
+
+.fbot_mssg.bot p {
+	color: white;
+}
+
+.fbot_mssg.user {
+	
+}
+
+/* .bot_mssg.user > img {
+	display : float;
+	top: 0;
+	right: 0;
+} */
+
+.fbot_mssg.user > h1 {
+	color: yellow;
+}
+
+.fbot_mssg.user p {
+	color: lightgrey;
+}
+
+
+.fbot_log p {
+	font-family: 'SimiliBit';
+	display:block;
+	margin: 4px;
+	color: red;
+	font-size: 1em;
+	text-wrap: wrap;
+}
+
+.fbot_writing {
+	margin: 5px;
+}
+
+#fbotsend { text-align:center; float:right; width:8%; height:17px; margin-right:1%;}
+
+#fbotsend:hover {
+	background-color: yellow;
+	cursor: pointer;
+}
+
+#fbotsend:active {
+	background-color: goldenrod;
+}
+
+#fbotinput {
+	font-family: 'SimiliBit';
+	position:fixed;
+	background-color: dimgrey;
+	box-shadow: 0 0 40px black;
+	height: 19px;
+	bottom:0;
+	left:0;
+	right:0;
+	padding: 2px;
+}
+
+#fbotinput textarea {
+	resize: none;
+	overflow-y: auto;
+	background-color:black;
+	color: white;
+	display: inline;
+	margin: 0;
+	font-family: 'SimiliBit';
+	font-size: 14px;
+	appearance: none;
+	border: none;
+	box-shadow: none;
+	padding:1px;
+	width:90%;
+	height:17px;
+}
+
+#fbotinput textarea:focus { outline: none; }
+
+#fleurbot {
+	overflow-y: hidden;
+}
+
+#fbotmessages {
+	position:absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 5px 5px 0 5px;
+	bottom:19px;
+	left:0;
+	right:0;
+	top: 5px;
+}

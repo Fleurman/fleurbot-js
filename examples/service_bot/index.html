@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en-US">
+
+  <head>
+  
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>FleurBot-example-fleurman</title>
+
+		<link href="fleurbot-light.css" rel="stylesheet" media="all" />
+		
+	</head>
+  
+	<body>
+	<div class="bg"></div>
+		<div id='botwrap'>
+		
+			<div id="botmessages">
+				
+			</div>
+			
+			<div id="botinput">
+				<textarea rows="2" cols="40"
+				id="bottextarea"
+				name="botinput"
+				autofocus="true"
+				maxlength="40"
+				placeholder="Message"
+				onkeypress="submitToBot(event)"></textarea>
+				<div id="botsend" onclick="submitToBot()">Send</div>
+			</div>
+		
+		</div>
+		
+		<script src="fleurbot.js"></script>
+		<script>
+			drawNewPost("admin","Hello, what can I do for you ?");
+		</script>
+	</body>
+  
+</html>

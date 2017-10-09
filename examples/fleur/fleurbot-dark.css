@@ -1,0 +1,170 @@
+body { background-color:grey;}
+
+.bot_mssg {
+	margin-bottom: 15px; 
+	opacity: 1;
+	-moz-animation: appear 0.5s ease; /* Mozilla */
+	-webkit-animation: appear 0.5s ease; /* Safari 4.0 - 8.0 */
+	animation: appear 0.5s ease;
+}
+
+.bot_mssg > img {
+	border-radius: 25px;
+	width: 64px;
+}
+
+.bot_mssg > h1 {
+	font-size: 1.2em;
+}
+
+.bot_mssg p {
+	padding: 10px;
+	border-radius: 20px;
+	line-height: 0.7em;
+	font-size: 1.7em;
+	font-family: 'Natixel';
+	word-wrap: break-word;
+}
+
+@-webkit-keyframes appear { 0% {opacity: 0;} 100% {opacity: 1;} }
+@keyframes appear { 0% {opacity: 0;} 100% {opacity: 1;} }
+
+.bot_mssg.bot {
+	text-align:left;
+}
+
+.bot_mssg.bot > img {
+	display : float;
+	top: 0;
+	left: 0;
+	/* background-color:lightgreen; */
+}
+
+.bot_mssg.bot > h1 {
+	display: inline;
+	top: 0;
+	color: gold;
+}
+
+.bot_mssg.bot p {
+	display:block;
+	margin: 0 10px 5px 40px;
+	color: dimgrey;
+	background-color: white;
+	border-top-left-radius: 0;
+}
+
+.bot_mssg.user {
+	text-align:right;
+}
+
+.bot_mssg.user > img {
+	display : float;
+	top: 0;
+	right: 0;
+	/* background-color:lightgreen; */
+}
+
+.bot_mssg.user > h1 {
+	display: inline;
+	top: 0;
+	color: yellow;
+}
+
+.bot_mssg.user p {
+	display:block;
+	margin: 0 40px 5px 0;
+	color: dimgrey;
+	background-color: lightgrey;
+	border-top-right-radius: 0;
+}
+
+
+.bot_log p {
+	display:block;
+	margin: 0 auto ;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	color: black;
+	font-size: 1.5em;
+	text-align: center;
+	text-wrap: wrap;
+	background-color: yellow;
+	-moz-animation: appear 0.5s ease; /* Mozilla */
+	-webkit-animation: appear 0.5s ease; /* Safari 4.0 - 8.0 */
+	animation: appear 0.5s ease;
+}
+
+.bot_writing {
+	width: 32px;
+	opacity: 0.8;
+	margin: 15px auto;
+	animation: fullRotate 1s cubic-bezier(.39,-0.29,.6,1.42) infinite;
+}
+
+@keyframes fullRotate {
+    from {
+	-ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);}
+    to {
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);}
+}
+
+#botsend { text-align:center; }
+
+#botsend:hover {
+	background-color: yellow;
+	cursor: pointer;
+}
+
+#botsend:active {
+	background-color: goldenrod;
+}
+
+#botinput {
+	position:fixed;
+	background-color: dimgrey;
+	box-shadow: 0 0 40px dimgrey;
+	bottom:0;
+	left:0;
+	right:0;
+	padding: 5px;
+	text-align:center;
+}
+
+#botinput textarea {
+	resize: none;
+	overflow-y: auto;
+	background-color:black;
+	color: white;
+	display: inline;
+	margin: auto 0;
+	font-family: 'Natixel';
+	font-size: 18px;
+	appearance: none;
+	border: none;
+	box-shadow: none;
+	padding:10px;
+	width:80%;
+	border-radius:15px;
+}
+
+#botinput textarea:focus { outline: none; }
+
+#botwrap {
+	overflow-y: hidden;
+}
+
+#botmessages {
+	position:absolute;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 5px 5px 0 5px;
+	bottom:96px;
+	left:0;
+	right:0;
+	top: 5px;
+}
