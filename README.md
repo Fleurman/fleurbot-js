@@ -1,3 +1,4 @@
+![fleurbot-logo](/icons/128.png?raw=true)
 # FleurBot.js
 
 FleurBot is a browser-based chat system with a Bot. [Examples here](https://fleurman.neocities.org/fleurbot/index.html)
