@@ -78,7 +78,6 @@ used to define answers branches.
 
 
 ### Syntax tools
-====
 for any action text, a few tools are available:
 - `\qt` ("quote") refers to the last user input
 - `\fqt` ("formated quote") refers to the last user input formated for query
