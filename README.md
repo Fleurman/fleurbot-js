@@ -6,7 +6,7 @@ FleurBot is a browser-based chat system with a Bot. [Examples here](https://fleu
 It has a (WIP not working for now) [editor](https://fleurman.neocities.org/fleurbot/editor/index.html).
 
 ## The System
->TODO: html & css canvas
+>TODO: html & css system
 
 ## The DataBase
 
@@ -16,7 +16,7 @@ contain all matching patterns, actions and characters datas.
 #### Characters
 This hash handles the characters informations. Each characters need the parameters "name" & "avatar".
 
-`botData.characters = {
+`fleurbot.data.characters = {
     user : {
     name : "The name to display",
     avatar : "The picture"
@@ -26,7 +26,7 @@ This hash handles the characters informations. Each characters need the paramete
 #### Vocab
 This hash contain lists of words that can be referred to with the function getVocab("id").
 
-`botData.vocab = {
+`fleurbot.data.vocab = {
 	hello : ["hello","hi","ciao","hey","good morning","good evening",],
 }`
 
@@ -42,7 +42,7 @@ the value is the action:
 This array contain actions that are randomly executed if 
 the user input didn't match any patterns or if it is a repetition.
 
-`botData.Generic = {
+`fleurbot.data.generic = {
 	none : [ actions ],
 	repeat: [ actions ]
 }`
@@ -85,6 +85,6 @@ for any action text, a few tools are available:
 - `\qt` ("quote") refers to the last user input
 - `\fqt` ("formated quote") refers to the last user input formated for query
 - `##id` ("matched") refers to the last matched string in checkList named "id"
-- `[url](str)` ("link") displays a hyperlink. (will be opened in a new tab)
+- `[str](url)` ("link") displays a hyperlink. (will be opened in a new tab)
 
 
