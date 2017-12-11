@@ -3,7 +3,7 @@
 
 FleurBot is a browser-based chat system with a Bot. [Examples here](https://fleurman.neocities.org/fleurbot/index.html)
 
-It has a (WIP) [editor](https://fleurman.neocities.org/fleurbot/editor/index.html).
+It has a (WIP not working for now) [editor](https://fleurman.neocities.org/fleurbot/editor/index.html).
 
 ## The System
 >TODO: html & css canvas
